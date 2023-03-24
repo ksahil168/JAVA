@@ -40,6 +40,14 @@ class fraction {
         return denum;
     }
 
+    public void setNumerator(int numerator) { // setter function
+        this.num = numerator; // set numerator
+    }
+
+    public void setDenominator(int denominator) { // setter function
+        this.denum = denominator; // set denominator
+    }
+
     // method to show
     void show() {
         System.out.println("Numerator is : " + num + " \nDenominator is : " + denum);
@@ -163,19 +171,36 @@ class fraction {
         return result;
     }
 
+    public int compareTo(Object object2) {
+
+        fraction fraction2 = (fraction) object2;
+
+        // instead of fraction2.getNumerator() we can also write fraction.denum and
+        // fraction.num
+        int numerator1 = num * fraction2.denum;
+        int numerator2 = fraction2.num * denum;
+
+        int result = numerator1 - numerator2;
+        return result;
+    }
+
 }
 
 class fraction_app {
     public static void main(String[] args) {
         fraction f = new fraction(25);
-        fraction f1 = new fraction(3, 6);
-        fraction f4 = new fraction(2, 5);
+        fraction f1 = new fraction(5, 6);
+        fraction f4 = new fraction(3, 6);
 
         fraction f2 = new fraction(24.5, 56.5);
 
         f1.show();
         System.out.println("--------------------------");
 
+        System.out.println("Cross Multiplication then minus (Comparison) : " + f4.compareTo(f1));
+        System.out.println("--------------------------");
+       
+    
         System.out.println("String Format of fraction : " + f1.toString());
         System.out.println("--------------------------");
 
@@ -188,9 +213,9 @@ class fraction_app {
         System.out.println("String Format of fraction : " + f1.toString());
         System.out.println("--------------------------");
 
-        System.out.println("+++ Sum is : " + f1.add());
+        System.out.println("+++ Sum is : " + f1.plus(f2));
         System.out.println("--------------------------");
-        System.out.println("--- Subtract is : " + f1.sub());
+        System.out.println("--- Subtract is : " + f1.minus(f2));
         System.out.println("--------------------------");
 
         System.out.println("*** Multiply is : " + f1.mul());
@@ -204,9 +229,9 @@ class fraction_app {
 
         System.out.println("Cross Multiplication : " + f1.dividedBy(f4));
         System.out.println("--------------------------");
-
         // f1.reduce();// wherever reduce funtion called it reduces the fraction to
         // lowest form
+
         System.out.println("Fraction Multiplication : " + f1.times(f4));
         System.out.println("--------------------------");
 
