@@ -86,5 +86,6 @@ public class IntArray {
         array.swapMinMax();
         array.displayElements();
         array.UniqueElements();
+
     }
 }
