@@ -3,6 +3,8 @@
 
 public class fib_dynamic {
 
+    private static int i;
+
     static int fib_rec_nodynamic(int n) {
         if (n <= 1) {
             return n;
@@ -26,12 +28,12 @@ public class fib_dynamic {
     public static void main(String[] args) {
         System.out.println("Dynamic Programming Approach");
         System.out.println("-----------------------------");
-        for (int i = 0; i <= 10; ++i) {
+        for (int i = 0; i <= 5; ++i) {
             System.out.println(i + ":" + fib_dynamicp(i));
         }
         System.out.println("Recursive or Non Dynamic Programming Approach");
         System.out.println("-----------------------------");
-        for (int i = 0; i <= 50; ++i) {
+        for (int i = 0; i <= 5; ++i) {
 
             System.out.println(i + ":" + fib_rec_nodynamic(i));
         }
