@@ -14,7 +14,7 @@ public class display_array {
 
     public static void main(String[] args) {
 
-        int[] arr = { 10, 20, 30, 40, 50 };
+        int[] arr = { 10, 20, 30, 40, 50,80 };
         display_array2(arr, 0);
 
     }
