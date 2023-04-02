@@ -120,16 +120,20 @@ public class SortingAlgorithms {
     }
 
     // Main method for testing
-    public static void main5(String[] args) {
+    public static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
+            
             int n;
             System.out.print("Enter the size of array: ");
             n = sc.nextInt();
+            
             int[] arr = new int[n];
             System.out.print("Enter array elements: ");
+            
             for (int i = 0; i < n; i++) {
                 arr[i] = sc.nextInt();
             }
+            
             System.out.print("Array elements are: ");
             for (int i = 0; i < n; i++) {
                 System.out.print(arr[i] + " ");
