@@ -1,5 +1,5 @@
 
-package Javacollection.Graph;
+package Graph;
 
 import java.util.LinkedList;
 
