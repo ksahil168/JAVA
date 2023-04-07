@@ -37,6 +37,10 @@ class LearnHashmap {
         languages.put(3, "JavaScript");
         System.out.println("Hasmap : " + languages);
 
+        HashMap<Integer, String> languages2 = new HashMap<>(languages);
+        languages2.put(11, "Eleven");
+        System.out.println("languages2 : " + languages2);
+
         String value = languages.get(2);
         System.out.println("Hasmap : " + value);
 
